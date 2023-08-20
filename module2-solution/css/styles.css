@@ -1,0 +1,47 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Clearfix */
+}
+
+.section {
+    float: left;
+    box-sizing: border-box;
+    width: 100%; /* Default to full width */
+    padding: 20px;
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Desktop view */
+@media screen and (min-width: 992px) {
+    .section {
+        width: 33.33%; /* Equal width for 3 sections */
+    }
+}
+
+/* Tablet view */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 50%; /* Equal width for the first 2 sections */
+    }
+    .section:nth-child(3) {
+        width: 100%; /* Full width for the third section */
+    }
+}
+
+/* Mobile view */
+@media screen and (max-width: 767px) {
+    .section {
+        width: 100%; /* Full width for all sections */
+    }
+}
